@@ -109,6 +109,7 @@ function calculate() {
 function processOperand(digit) {
     if (expression.length === 1) expression.length = 0;
     valueHolder += digit;
+
     updateDisplay(false);
 }
 
@@ -119,7 +120,7 @@ function clear() {
 }
 
 function updateDisplay(isResult) {
-    if (isResult) display.textContent = expression[0];
+    if (isResult) display.textContent = Math.round(expression[0] * 100) / 100;
     else display.textContent = valueHolder;
 }
 
