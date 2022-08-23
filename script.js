@@ -30,7 +30,7 @@ function processOperator(operator) {
                 expression.push(0);
                 expression.push(operator);
             } else {
-                expression.push(parseInt(valueHolder));
+                expression.push(parseFloat(valueHolder));
                 valueHolder = '';
                 expression.push(operator);
             }
@@ -42,7 +42,7 @@ function processOperator(operator) {
             if (valueHolder === '') {
                 expression[1] = operator;
             } else {
-                expression.push(parseInt(valueHolder));
+                expression.push(parseFloat(valueHolder));
                 valueHolder = '';
                 let result = operate();
                 if (result == Infinity) {
@@ -61,7 +61,7 @@ function calculate() {
     switch (expression.length) {
         case 0:
             if (valueHolder !== ''){
-                expression.push(parseInt(valueHolder));
+                expression.push(parseFloat(valueHolder));
                 valueHolder = '';
                 updateDisplay(true);
             }
@@ -92,7 +92,7 @@ function calculate() {
                         break;
                  }
             } else {
-                expression.push(parseInt(valueHolder));
+                expression.push(parseFloat(valueHolder));
                 valueHolder = '';
                 let result = operate();
                 if (result == Infinity) {
@@ -120,7 +120,7 @@ function clear() {
 
 function updateDisplay(isResult) {
     if (isResult) display.textContent = expression[0];
-    else display.textContent = parseInt(valueHolder);
+    else display.textContent = valueHolder;
 }
 
 function operate() {
