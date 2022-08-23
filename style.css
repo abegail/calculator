@@ -77,8 +77,24 @@ button {
     background-color: #F69907;
 }
 
+#operators button:hover {
+    background-color: #fba419;
+}
+
+#operators button:active {
+    background-color: rgba(223, 138, 0, 0.929);
+}
+
 .digit {
     background-color: #888888;
+}
+
+.digit:hover {
+    background-color: #959494;
+}
+
+.digit:active {
+    background-color: #888888e4;
 }
 
 #digits .clear,
@@ -86,10 +102,21 @@ button {
     background-color: #AAAAAA;
 }
 
+#digits .clear:hover,
+#digits .operator:hover {
+    background-color: #b7b7b7;
+}
+
+#digits .clear:active,
+#digits .operator:active {
+    background-color: #b7b7b7e3;
+}
+
 button {
     border: 0.5px solid #3A3936;
     color: whitesmoke;
     font-size: 25px;
+    cursor: pointer;
 }
 
 #multiply button {
