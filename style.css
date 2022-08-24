@@ -73,7 +73,8 @@ button {
     border-bottom-right-radius: 18px;
 }
 
-#operators button {
+.operator,
+.equals {
     background-color: #F69907;
 }
 
@@ -81,7 +82,8 @@ button {
     background-color: #fba419;
 }
 
-#operators button:active {
+#operators button:active,
+.activeOperator {
     background-color: rgba(223, 138, 0, 0.929);
 }
 

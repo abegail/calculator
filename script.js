@@ -19,16 +19,14 @@ function checkKey(e) {
         case '7':
         case '8':
         case '9':
-            const activeButton = document.querySelector(`#num${e.key}`);
-            activeButton.classList.add('activeDigit');
-            window.addEventListener('keyup', () => {
-                activeButton.classList.remove('activeDigit')
-            })
+        case '.':
             processOperand(e.key);
             break;
         case '+':
         case '-':
         case '*':
+            processOperator(e.key);
+            break;
         case '/':
             processOperator(e.key);
             break;
