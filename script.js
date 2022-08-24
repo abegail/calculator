@@ -27,8 +27,9 @@ function checkKey(e) {
         case '/':
             processOperator(e.key);
             break;
-        case '=':
         case 'Enter':
+            e.preventDefault();
+        case '=':
             calculate();
             break;
     }
@@ -37,6 +38,7 @@ function checkKey(e) {
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
+
         switch (button.classList.value) {
             case 'digit':
                 processOperand(button.attributes.id.nodeValue);
