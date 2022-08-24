@@ -7,7 +7,7 @@ let valueHolder = '';
 window.addEventListener('keydown', checkKey);
 
 function checkKey(e) {
-    console.log(e.key);
+    console.log(e);
     switch (e.key) {
         case '0':
         case '1':
@@ -19,6 +19,11 @@ function checkKey(e) {
         case '7':
         case '8':
         case '9':
+            const activeButton = document.querySelector(`#num${e.key}`);
+            activeButton.classList.add('activeDigit');
+            window.addEventListener('keyup', () => {
+                activeButton.classList.remove('activeDigit')
+            })
             processOperand(e.key);
             break;
         case '+':
@@ -32,19 +37,23 @@ function checkKey(e) {
         case '=':
             calculate();
             break;
+        case 'Backspace':
+            remove();
+            break;
     }
     console.log(expression);
 }
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
+        console.log(button.value);
 
         switch (button.classList.value) {
             case 'digit':
-                processOperand(button.attributes.id.nodeValue);
+                processOperand(button.value);
                 break;
             case 'operator':
-                processOperator(button.attributes.id.nodeValue);
+                processOperator(button.value);
                 break;
             case 'equals':
                 calculate();
@@ -52,9 +61,18 @@ buttons.forEach(button => {
             case 'clear':
                 clear();
                 break;
+            case 'remove':
+                remove();
+                break;
         }
     });
-});
+}); 
+
+function remove() {
+    const newValue = valueHolder.slice(0, valueHolder.length-1);
+    valueHolder = newValue;
+    updateDisplay(false);
+}
 
 function processOperator(operator) {
     switch(expression.length) {

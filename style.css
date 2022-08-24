@@ -68,10 +68,6 @@ button {
     flex-wrap: wrap;
 }
 
-.clear {
-    width: 175px;
-}
-
 .equals {
     height: 130px;
     border-bottom-right-radius: 18px;
@@ -97,22 +93,26 @@ button {
     background-color: #959494;
 }
 
-.digit:active {
+.digit:active,
+.activeDigit {
     background-color: #888888e4;
 }
 
 #digits .clear,
-#digits .operator {
+#digits .operator,
+.remove {
     background-color: #AAAAAA;
 }
 
 #digits .clear:hover,
-#digits .operator:hover {
+#digits .operator:hover,
+.remove:hover {
     background-color: #b7b7b7;
 }
 
 #digits .clear:active,
-#digits .operator:active {
+#digits .operator:active,
+.remove:active {
     background-color: #b7b7b7e3;
 }
 
