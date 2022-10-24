@@ -38,6 +38,9 @@ function checkKey(e) {
         case 'Backspace':
             remove();
             break;
+        case 'Escape':
+            clear();
+            break;
     }
     console.log(expression);
 }
