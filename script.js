@@ -97,7 +97,7 @@ function processOperator(operator) {
                 expression.push(parseFloat(valueHolder));
                 valueHolder = '';
                 let result = operate();
-                if (result == Infinity || NaN) {
+                if (result == Infinity) {
                     clear();
                     display.textContent = 'Yo mama';
                 } else {
@@ -147,7 +147,7 @@ function calculate() {
                 expression.push(parseFloat(valueHolder));
                 valueHolder = '';
                 let result = operate();
-                if (result == Infinity || NaN) {
+                if (result == Infinity) {
                     clear();
                     display.textContent = 'Yo mama';
                 } else {
