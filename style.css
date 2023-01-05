@@ -1,130 +1,130 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Courier New", Courier, monospace;
 }
 
 #container {
-    width: 350px;
-    height: 500px;
-    border: 1px solid black;
-    border-radius: 18px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.8);
-    background-color: #3A3936;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+  width: 350px;
+  height: 500px;
+  border: 1px solid black;
+  border-radius: 18px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  background-color: #3a3936;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 #display {
-    color: whitesmoke;
-    font-size: 60px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    word-break: break-all;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    height: 140px;
-    overflow: hidden;
+  color: whitesmoke;
+  font-size: 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  word-break: break-all;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  height: 140px;
+  overflow: hidden;
 }
 
 #bottomRow {
-    display: flex;
+  display: flex;
 }
 
 button {
-    flex: auto;
-    height: 65px;
-    width: 87.5px;
+  flex: auto;
+  height: 65px;
+  width: 87.5px;
 }
 
 #zero .digit {
-    border-bottom-left-radius: 18px;
-    width: 175px;
+  border-bottom-left-radius: 18px;
+  width: 175px;
 }
 
 #middleRow {
-    display: flex;
+  display: flex;
 }
 
 #operators {
-    display: flex;
-    flex-direction: column;
-    width: 87.5px;
+  display: flex;
+  flex-direction: column;
+  width: 87.5px;
 }
 
 #digits {
-    flex-grow: 1;
-    display: flex;
-    flex-wrap: wrap;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .equals {
-    height: 130px;
-    border-bottom-right-radius: 18px;
+  height: 130px;
+  border-bottom-right-radius: 18px;
 }
 
 .operator,
 .equals {
-    background-color: #F69907;
+  background-color: #f69907;
 }
 
 #operators button:hover {
-    background-color: #fba419;
+  background-color: #fba419;
 }
 
 #operators button:active,
 .activeOperator {
-    background-color: rgba(223, 138, 0, 0.929);
+  background-color: rgba(223, 138, 0, 0.929);
 }
 
 .digit {
-    background-color: #888888;
+  background-color: #888888;
 }
 
 .digit:hover {
-    background-color: #959494;
+  background-color: #959494;
 }
 
 .digit:active,
 .activeDigit {
-    background-color: #888888e4;
+  background-color: #888888e4;
 }
 
 #digits .clear,
 #digits .operator,
 .remove {
-    background-color: #AAAAAA;
+  background-color: #aaaaaa;
 }
 
 #digits .clear:hover,
 #digits .operator:hover,
 .remove:hover {
-    background-color: #b7b7b7;
+  background-color: #b7b7b7;
 }
 
 #digits .clear:active,
 #digits .operator:active,
 .remove:active {
-    background-color: #b7b7b7e3;
+  background-color: #b7b7b7e3;
 }
 
 button {
-    border: 0.5px solid #3A3936;
-    color: whitesmoke;
-    font-size: 25px;
-    cursor: pointer;
+  border: 0.5px solid #3a3936;
+  color: whitesmoke;
+  font-size: 25px;
+  cursor: pointer;
 }
 
 #multiply button {
-    padding-top: 10px;
+  padding-top: 10px;
 }
